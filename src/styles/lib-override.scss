@@ -1,0 +1,148 @@
+/* Override Antd Styling */
+
+.ant-upload-list-picture-card-container {
+	width: 280px;
+	height: 270px;
+	margin: 0 !important;
+	border-radius: 5px !important;
+}
+.ant-upload.ant-upload-select-picture-card {
+	width: 280px;
+	height: 270px;
+	margin: 0 !important;
+	background-color: #fafafa;
+	border: 0 !important;
+	border-radius: 5px !important;
+	cursor: pointer;
+	transition: border-color 0.3s;
+}
+
+.ant-modal-title {
+	color: rgb(51, 51, 51);
+	font-size: 16px;
+	font-family: $titleFontFamily;
+}
+
+.ant-btn,
+.ant-btn-primary {
+	font-size: 14px;
+	height: auto;
+	border-left-style: 5px;
+	margin-left: 0 !important;
+}
+
+.ant-btn-primary {
+	background-color: $primary;
+	border-color: $primary;
+}
+.ant-dropdown-menu {
+	position: relative;
+	margin: 0;
+	padding: 2px 5px;
+}
+
+.ant-table-tbody > tr > td {
+	font-size: 14px;
+}
+
+.ant-form-item-has-error .ant-form-item-explain,
+.ant-form-item-has-error .ant-form-item-split,
+.ant-form-item-has-error-leave .ant-form-item-explain {
+	font-size: 10px;
+	padding-bottom: 10px;
+	margin-top: 5px;
+	color: $text;
+}
+
+.ant-input-affix-wrapper > input.ant-input {
+	padding-left: 10px;
+	font-size: 12px;
+}
+
+.ant-tabs-nav {
+	font-family: $textFontFamily;
+	font-size: 14px;
+	.ant-tabs-tab:hover,
+	.ant-tabs-tab-active {
+		color: $primary;
+		font-family: $textFontFamily;
+		font-size: 14px;
+	}
+}
+
+.ant-tabs-ink-bar {
+	background-color: $primary;
+}
+
+// Override Rsuite Table Style
+.rs-input,
+.rs-table-cell-content,
+.rs-table-cell-content span,
+.rs-table-cell-content button {
+	font-size: 12px;
+	vertical-align: middle;
+	display: table-cell;
+}
+
+.rs-table-column-resize-spanner::before {
+	border-color: transparent #5f683b transparent transparent;
+}
+
+.rs-table-column-resize-spanner::after {
+	border-color: transparent transparent transparent #5f683b;
+}
+
+.rs-btn-link,
+.rs-btn-link:hover,
+.rs-btn-link:focus,
+.rs-btn-link:active,
+.rs-btn-link.rs-btn-active,
+.rs-btn-link:active:hover,
+.rs-btn-link.rs-btn-active:hover,
+.rs-btn-link:active:focus,
+.rs-btn-link.rs-btn-active:focus,
+.rs-btn-link:active.focus,
+.rs-btn-link.rs-btn-active.focus,
+.rs-picker-has-value .rs-btn .rs-picker-toggle-value,
+.rs-picker-has-value .rs-picker-toggle .rs-picker-toggle-value,
+.rs-picker-select-menu-item.rs-picker-select-menu-item-active,
+.rs-picker-select-menu-item.rs-picker-select-menu-item-active:hover,
+.rs-pagination > li.rs-pagination-btn-active > a:hover,
+.rs-pagination > li.rs-pagination-btn-active > a:focus,
+.rs-pagination > li.rs-pagination-btn-active > a.focus,
+.rs-pagination > li.rs-pagination-btn-active > a {
+	color: $primary;
+	font-weight: 400;
+}
+
+.rs-btn-link:hover,
+.rs-btn-link:focus,
+.rs-btn-link:active,
+.rs-btn-link.rs-btn-active,
+.rs-btn-link:active:hover,
+.rs-btn-link.rs-btn-active:hover,
+.rs-btn-link:active:focus,
+.rs-btn-link.rs-btn-active:focus,
+.rs-btn-link:active.focus,
+.rs-btn-link.rs-btn-active.focus,
+.rs-picker-select-menu-item.rs-picker-select-menu-item-active,
+.rs-picker-select-menu-item.rs-picker-select-menu-item-active:hover {
+	font-weight: 600;
+}
+
+.rs-table:not(.rs-table-column-resizing) .rs-table-cell-header .rs-table-cell:hover ~ .rs-table-column-resize-spanner,
+.rs-table:not(.rs-table-column-resizing) .rs-table-column-resize-spanner:hover,
+.rs-table-mouse-area > span,
+.rs-table-mouse-area {
+	background-color: $primary;
+}
+
+.rs-table-cell-header-sortable .rs-table-cell-content {
+	display: flex;
+}
+
+.rs-table-cell-header-icon-sort,
+.rs-table-cell-header-icon-sort-asc::after,
+.rs-table-cell-header-icon-sort-desc::after {
+	color: $primary;
+}

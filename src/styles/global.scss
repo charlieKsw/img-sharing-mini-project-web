@@ -1,0 +1,41 @@
+.without-line-height {
+	line-height: 6px;
+}
+
+.flex-column {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.flex-row {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+}
+
+.vertical-center {
+	align-items: center;
+}
+
+.table-loader {
+	display: block;
+	text-align: center;
+	padding-top: 20vh;
+	padding-bottom: 20vh;
+}
+
+button {
+	background: $primary;
+	border-color: $primary;
+	font-family: $textFontFamily;
+	font-size: 12;
+	font-weight: 600;
+	width: 100%;
+	&:hover,
+	&:active {
+		border-color: $lightGreen !important;
+		background-color: $lightGreen !important;
+		background-image: linear-gradient(90deg, $lightGreen 0%, $secondary 100%) !important;
+	}
+}

@@ -1,0 +1,106 @@
+.header {
+	min-width: 86vw;
+	display: flex;
+	flex-direction: row;
+	margin: 15px 110px;
+	box-shadow: 4px 1px 4px hsl(0, 0%, 87%);
+	background-color: $text;
+	.header-components-container {
+		flex: 1;
+		justify-content: center;
+		align-content: center;
+	}
+
+	.MuiIconButton-root {
+		width: fit-content;
+		border-style: solid;
+		border-radius: 5px;
+		justify-content: flex-start;
+	}
+	.header-title {
+		color: $lightBlue;
+		font-family: $headerFontFamily;
+		font-size: 24px;
+		display: flex;
+		align-items: center;
+	}
+	.flex-end-button-container {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		.login-btn {
+			font-size: 14px;
+			width: 123px;
+			height: fit-content;
+			font-weight: bold;
+			border-radius: 5px;
+			margin-left: 12px;
+		}
+	}
+
+	.avatar {
+		background-color: $background;
+		vertical-align: middle;
+		cursor: pointer;
+		font-size: 14px;
+		width: 55;
+		height: 55;
+	}
+
+	.ant-avatar-lg {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		border-radius: 50%;
+	}
+
+	.ant-dropdown .ant-dropdown-placement-bottomLeft {
+		min-width: 50px;
+		left: 1955px !important;
+		top: 95px !important;
+	}
+
+	.name-container {
+		padding-left: 20px;
+		padding-right: 15px;
+		border-width: 0 0 0 2px;
+		border-color: $label;
+		display: flex;
+		align-items: center;
+	}
+}
+
+.setting-menu {
+	min-width: 150px;
+	.setting-menu-item {
+		color: $dark;
+		&.logout {
+			color: $danger;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.flag-select {
+		margin-left: -14px;
+	}
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 768px) {
+	.desktop-menu {
+		display: none !important;
+	}
+
+	.mobile-menu {
+		display: flex !important;
+	}
+}

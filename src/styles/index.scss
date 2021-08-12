@@ -1,0 +1,19 @@
+@import './_styles.scss';
+@import './lib-override.scss';
+
+body {
+	font-family: $textFontFamily;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 14px;
+	overflow-x: hidden;
+	width: 100vw;
+}
+
+@import './fonts.scss';
+@import './global.scss';
+@import './header.scss';
+@import './login-container.scss';
+@import './main-container.scss';
+@import './explore-container.scss';

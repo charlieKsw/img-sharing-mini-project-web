@@ -1,0 +1,262 @@
+.main-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100%;
+	min-width: 1600px;
+	.main-content {
+		background: $lightWhite;
+		padding: 25px 0 0 0;
+		justify-content: center;
+	}
+	.posts-row-container {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+	}
+
+	.header-fonts-container {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		width: 100%;
+		margin: 0;
+		padding-right: 18px;
+		padding-left: 35px;
+		h2 {
+			flex: 1;
+			color: $label;
+		}
+	}
+	.headlineIcon-wrapper {
+		display: flex;
+		justify-content: center;
+		justify-items: center;
+		align-items: center;
+		flex-direction: column;
+		margin-top: 20px;
+		height: auto;
+
+		.add-post-button {
+			width: 150px;
+			border-radius: 150px;
+			height: 150px;
+			font-weight: bold;
+			color: $lightBlue;
+			margin: 0 0 30px auto;
+			border-width: 2px;
+			border-style: dotted;
+			background-color: $lightWhite;
+			border-color: $lightBlue;
+		}
+		.upload-post-form {
+			width: 100%;
+			min-height: 380px;
+			margin-bottom: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-radius: 5px;
+
+			.oncancel-button {
+				cursor: pointer;
+				border-radius: 28px;
+				background-color: $label;
+				text-align: center;
+				font-size: 14px;
+				line-height: 2;
+				color: $dark;
+				width: 28px;
+				height: 28px;
+				position: relative;
+				z-index: 100;
+				left: 295px;
+				bottom: 200px;
+			}
+			.upload-image {
+				border: 1px dashed #d9d9d9;
+				width: auto;
+				border-radius: 5px;
+			}
+			.ant-input {
+				margin-bottom: 15px !important;
+				font-size: 14px !important;
+			}
+		}
+		.MuiCardContent-root {
+			padding: 10px 0;
+		}
+		.card-content {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			flex-direction: column;
+			padding: 0 10px 20px 0;
+		}
+		.flex-row {
+			display: flex;
+			flex-direction: row;
+		}
+		.data {
+			margin: 10px 5px;
+		}
+		.media {
+			height: 0;
+			padding-top: 56.25%;
+			min-width: 60vh;
+			min-height: 60vh;
+		}
+		.avatar {
+			background-color: burlywood;
+		}
+		.root {
+			width: 650px;
+			padding: 0 30px;
+			border-radius: 15px;
+			margin-bottom: 65px;
+		}
+	}
+	.appsIcon-wrapper {
+		align-items: flex-start;
+		flex-direction: column;
+		margin: 0 0 0 10px;
+		.MuiImageList-root {
+			min-width: 1000px;
+		}
+		.people-name {
+			color: $text;
+			margin-left: 6px;
+			font-size: 14px;
+		}
+	}
+
+	.side {
+		display: flex;
+		flex-direction: row;
+		flex: 1;
+		margin: 0 110px;
+		background-color: $text;
+		.side-menu {
+			background: $lightWhite;
+			display: flex;
+			flex-direction: column;
+		}
+		.logo-position {
+			position: absolute;
+			top: 125px;
+			left: 198px;
+			width: 155px;
+			height: 155px;
+			border-radius: 155px;
+			background-color: $label;
+		}
+		.side-menu-icon {
+			font-size: 18px;
+			padding-bottom: 10px;
+		}
+		.side-menu-icon,
+		p {
+			color: $text;
+		}
+
+		.profile-container {
+			display: flex;
+			justify-content: center;
+			box-sizing: border-box;
+			border-width: 1px;
+			min-height: 420px;
+			border-radius: 5px;
+			padding: 8px 15px;
+			margin: 95px 5px 0 25px;
+			border: solid 1px #e3e3e3;
+			background-color: $text;
+			.bio-box {
+				color: $background;
+				padding-top: 98px;
+				text-align: center;
+			}
+
+			h6 {
+				line-height: 2;
+			}
+
+			.edit-profile {
+				margin: 10px 0 5px;
+				border-radius: 5px;
+				height: 45px;
+				width: 238px;
+			}
+		}
+		.profile-followers {
+			display: flex;
+			color: $text;
+			flex-direction: row;
+			border-radius: 5px;
+			margin: 10px 0;
+
+			.follower-number > span,
+			.following-number > span {
+				color: $dark;
+				font-weight: bold;
+			}
+			.follower-number,
+			.following-number {
+				flex: 1;
+				background-color: #faf4f4;
+				padding: 15px 25px;
+				font-size: 16px;
+				color: $label;
+				border: solid 2px $text;
+				border-radius: 5px;
+			}
+		}
+
+		.side-menu-footer-container {
+			flex: 2;
+			margin: 0 25px;
+			h2 {
+				font-size: 16px;
+			}
+			.img-wrapper {
+				display: flex;
+				align-items: center;
+				.discover-people-img {
+					border: solid 1px $text;
+					width: 50px;
+					height: 50px;
+					border-radius: 50px;
+					margin: 6px 0;
+				}
+			}
+		}
+		.people-list {
+			display: flex;
+			flex-direction: column;
+			.discover-people-name {
+				color: $dark;
+				margin-left: 12px;
+				font-size: 12px;
+				font-weight: bold;
+			}
+			.discover-people-username {
+				color: $label;
+				margin-left: 12px;
+				font-size: 16;
+				font-weight: bold;
+			}
+		}
+	}
+	.header-icon-container {
+		display: flex;
+		align-items: center;
+		justify-items: center;
+		text-align: center;
+	}
+	.icon-space {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.MuiSvgIcon-fontSizeLarge {
+		font-size: 35px;
+	}
+}

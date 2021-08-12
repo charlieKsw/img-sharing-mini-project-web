@@ -1,0 +1,51 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: $titleFontFamily;
+	font-weight: 600;
+	color: $lightBg;
+	margin: 0;
+}
+
+p,
+label,
+a {
+	font-family: $textFontFamily;
+	margin: 0;
+}
+
+// Title
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+h3 {
+	font-size: 16px;
+}
+
+// Text
+p.large {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+p.small,
+button {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+label {
+	font-size: 12px;
+	font-weight: 400;
+}
+
+label.small {
+	font-size: 10px;
+}

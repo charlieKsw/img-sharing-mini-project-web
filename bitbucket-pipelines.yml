@@ -1,0 +1,47 @@
+image: node:10.16.3
+
+pipelines:
+  branches:
+    master:
+      - step:
+          name: Build Production Environment 
+          script:
+            - npm install
+            - npm run build
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy to Production S3
+          deployment: production
+          script:
+            - echo "Deploying with S3 Key $AWS_ACCESS_KEY_ID_PROD"
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_PROD
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_PROD
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_PROD
+                S3_BUCKET: $S3_BUCKET_PROD
+                LOCAL_PATH: "build"
+                REACT_APP_API_ENDPOINT: $REACT_APP_API_ENDPOINT_PROD
+
+    uat:
+      - step:
+          name: Build UAT Environment
+          script:
+            - npm install
+            - npm run build
+          artifacts:
+            - build/**
+      - step:
+          name: Deploy to UAT S3
+          deployment: staging
+          script:
+            - echo "Deploying with S3 Key $AWS_ACCESS_KEY_ID_UAT"
+            - pipe: atlassian/aws-s3-deploy:0.4.3
+              variables:
+                AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID_UAT
+                AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY_UAT
+                AWS_DEFAULT_REGION: $AWS_DEFAULT_REGION_UAT
+                S3_BUCKET: $S3_BUCKET_UAT
+                REACT_APP_API_ENDPOINT: $REACT_APP_API_ENDPOINT
+                LOCAL_PATH: "build"
