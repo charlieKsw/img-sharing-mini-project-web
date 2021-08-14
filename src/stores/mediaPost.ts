@@ -1,3 +1,4 @@
+import result from 'antd/lib/result';
 import { action } from 'mobx';
 import { api } from '../config/api';
 import { ApiStore } from './api';
@@ -30,6 +31,22 @@ export class MediaPostStore {
 			const result: any = await callApi('GET', url, {});
 			if (result && result['success']) {
 				return { success: true, userPost: result['userPost'] };
+			}
+			return generalError;
+		} catch (e) {
+			return generalError;
+		}
+	}
+
+	@action.bound
+	async deleteMediaPost(id: number) {
+		const url = `${api.path}/user-post/${id}`;
+		const { callApi } = new ApiStore();
+		const generalError = { success: false, error: 'general_error' };
+		try {
+			const result: any = await callApi('DELETE', url, {});
+			if (result && result['success']) {
+				return { success: true, message: result['message'] };
 			}
 			return generalError;
 		} catch (e) {

@@ -23,7 +23,6 @@ export const MainContainer = (props: MainContainerProps) => {
 	return (
 		<div className="main-container">
 			{/* Header */}
-
 			<Header token={userToken} />
 			<div className="side">
 				{/* Side Menu */}

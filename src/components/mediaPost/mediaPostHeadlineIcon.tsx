@@ -12,6 +12,9 @@ import { Button } from '..';
 import { UploadPostForm } from '../uploadPost';
 import moment from 'moment';
 
+// Icon
+import { DeleteOutlined } from '@ant-design/icons';
+
 // Post Items
 // import posts from './posts';
 
@@ -24,10 +27,21 @@ interface MediaPostHeadlineIconProps {
 	onFinishFailed: any;
 	dataList: any;
 	isLoading: boolean;
+	onPostDelete: any;
 }
 
 export const MediaPostHeadlineIcon = (props: MediaPostHeadlineIconProps) => {
-	const { isLoading, dataList, addPost, setAddPost, isCancel, setIsCancel, onFinish, onFinishFailed } = props;
+	const {
+		onPostDelete,
+		isLoading,
+		dataList,
+		addPost,
+		setAddPost,
+		isCancel,
+		setIsCancel,
+		onFinish,
+		onFinishFailed
+	} = props;
 
 	const handleAddPost = () => {
 		setAddPost(true);
@@ -65,8 +79,8 @@ export const MediaPostHeadlineIcon = (props: MediaPostHeadlineIconProps) => {
 									</Avatar>
 								}
 								action={
-									<IconButton aria-label="settings">
-										<MoreHorizIcon />
+									<IconButton onClick={() => onPostDelete(item.id)} aria-label="settings">
+										<DeleteOutlined />
 									</IconButton>
 								}
 								title="Rain"

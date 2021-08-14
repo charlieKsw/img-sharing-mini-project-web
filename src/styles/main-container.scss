@@ -37,6 +37,14 @@
 		margin-top: 20px;
 		height: auto;
 
+		.MuiCardHeader-action {
+			flex: 0 0 auto;
+			align-self: flex-start;
+			margin-top: 0;
+		}
+		.MuiIconButton-root {
+			font-size: 22px;
+		}
 		.add-post-button {
 			width: 150px;
 			border-radius: 150px;
@@ -103,14 +111,14 @@
 		.media {
 			height: 0;
 			padding-top: 56.25%;
-			min-width: 60vh;
+			min-width: 54vh;
 			min-height: 60vh;
 		}
 		.avatar {
 			background-color: burlywood;
 		}
 		.root {
-			width: 650px;
+			width: 700px;
 			padding: 0 30px;
 			border-radius: 15px;
 			margin-bottom: 65px;

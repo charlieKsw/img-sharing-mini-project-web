@@ -73,9 +73,9 @@ export const UploadPostForm = (props: UploadPostProps) => {
 	const submitForm = (fileList: any, description: any) => {
 		let fileObj = fileList[0]['thumbUrl'];
 		onFinish && onFinish({ imgUrl: fileObj, description: description });
-
 		// Clear form
-		form.resetFields();
+		setFileList([]);
+		setDescription('');
 	};
 
 	return (
@@ -85,7 +85,7 @@ export const UploadPostForm = (props: UploadPostProps) => {
 					X
 				</div>
 			)}
-			<AntdForm form={form} onFinish={() => submitForm} onFinishFailed={onFinishFailed || undefined}>
+			<AntdForm form={form} onFinishFailed={onFinishFailed || undefined}>
 				<AntdForm.Item>
 					<ImgCrop rotate>
 						<Upload
