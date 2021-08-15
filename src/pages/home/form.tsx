@@ -8,6 +8,7 @@ import { HeaderIcon, MediaPostAppsIcon, MediaPostHeadlineIcon } from '../../comp
 //Store
 import { useMediaPostStore } from '../../stores';
 import { BasicResult } from '../../models/general';
+import { colors } from '../../config/style';
 
 interface HomeFormProps {
 	dataList: Array<object>;
@@ -82,6 +83,10 @@ const HomeForm = (props: HomeFormProps) => {
 				<h2>{dataList.length > 0 ? `${dataList.length} POST` : `0 POST`}</h2>
 				<HeaderIcon formType={formType} setFormType={setFormType} />
 			</div>
+
+			<h2 style={{ textAlign: 'center', color: colors.darkBg }}>
+				{dataList.length === 0 && `Start your first post on InstaPic!`}
+			</h2>
 
 			{/* Spinner */}
 			{isLoading && <Spin className="table-loader" />}
