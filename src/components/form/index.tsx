@@ -178,7 +178,7 @@ export const Form = (props: FormProps) => {
 									}
 								) : (
 									{
-										borderColor: colors.lightBlue,
+										borderColor: colors.tiffanyBlue,
 										background: colors.lightBlue
 									}
 								)
