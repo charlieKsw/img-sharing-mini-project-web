@@ -7,7 +7,7 @@ import { colors, profilePicture } from '../../config/style';
 import { Button } from '..';
 import { Input } from 'antd';
 
-const LOGO = `assets/${profilePicture}`;
+const ICON = `assets/${profilePicture}`;
 
 interface SideMenuProps {}
 
@@ -27,7 +27,7 @@ export const SideMenu = (props: SideMenuProps) => {
 
 	return (
 		<div className="side-menu">
-			<img src={LOGO} className="logo-position img-fluid" alt={'header-logo'} />
+			<img src={ICON} className="logo-position img-fluid" alt={'header-logo'} />
 
 			<div className="profile-container">
 				<div className="bio-box">

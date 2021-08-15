@@ -42,7 +42,7 @@ const HomeForm = (props: HomeFormProps) => {
 			}
 			return message.error(`Submit Failed`);
 		},
-		[ getMediaPost, setFormType, setAddPost, createMediaPost ]
+		[ setData, getMediaPost, setFormType, setAddPost, createMediaPost ]
 	);
 
 	const onPostDelete = useCallback(
@@ -50,9 +50,7 @@ const HomeForm = (props: HomeFormProps) => {
 			const result: BasicResult = await deleteMediaPost(id);
 			if (result && result['success']) {
 				message.success(`Delete post successfully`);
-				{
-					/* Get dataList once post successfully deleted */
-				}
+				/* Get dataList once post successfully deleted */
 				const fetchPost: any = await getMediaPost();
 				if (fetchPost && fetchPost['success']) {
 					return setData(fetchPost['userPost']);
@@ -62,7 +60,7 @@ const HomeForm = (props: HomeFormProps) => {
 			}
 			return message.error(`Failed to delete post, please try again`);
 		},
-		[ getMediaPost, deleteMediaPost ]
+		[ setData, getMediaPost, deleteMediaPost ]
 	);
 
 	const onFinishFailed = (errorInfo: any) => {
@@ -75,7 +73,7 @@ const HomeForm = (props: HomeFormProps) => {
 				getData();
 			}
 		},
-		[ getData, onPostCreate, onPostDelete ]
+		[ getData, dataList, onPostCreate, onPostDelete ]
 	);
 
 	return (

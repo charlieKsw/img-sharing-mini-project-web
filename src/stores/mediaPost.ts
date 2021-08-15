@@ -1,4 +1,3 @@
-import result from 'antd/lib/result';
 import { action } from 'mobx';
 import { api } from '../config/api';
 import { ApiStore } from './api';

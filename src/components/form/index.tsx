@@ -158,7 +158,7 @@ export const Form = (props: FormProps) => {
 					/>
 					{/* Show Sign up option for new user */}
 					{!isSignUp ? (
-						<span style={{ color: colors.white }}>
+						<span style={{ color: colors.darkBg }}>
 							Don't have account yet?
 							<u onClick={() => onSignUpClick()} className="sign-up-hover">
 								Sign Up now

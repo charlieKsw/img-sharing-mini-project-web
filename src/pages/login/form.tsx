@@ -47,11 +47,10 @@ const LoginForm = () => {
 	const onFinishFailed = (errorInfo: any) => {
 		console.log('Failed:', errorInfo);
 	};
-
 	return (
 		<div style={{ minWidth: 300 }}>
-			<h2 style={{ color: colors.white }}>{isSignUp ? 'Sign Up' : 'Login'}</h2>
-			<Line position={'center'} color={colors.white} height={2} />
+			<h2 style={{ color: colors.lightBlue }}>{isSignUp ? 'Sign Up' : 'Login'}</h2>
+			<Line position={'center'} color={colors.lightBlue} height={2} />
 			{/* Form */}
 			<div style={{ maxWidth: 400 }}>
 				<Form

@@ -1,22 +1,29 @@
 .login-container {
 	display: flex;
+	flex-direction: column;
 	min-height: inherit;
 	flex: 1;
 	align-items: center;
 	justify-content: center;
-	background-color: $tiffanyBlue;
-	background-image: linear-gradient(225deg, $tiffanyBlue 0%, $purple 100%);
+	background: $lightWhite;
+	.header-title {
+		margin-left: 5px;
+		margin-bottom: 25px;
+		color: $lightBlue;
+		font-family: $headerFontFamily;
+		font-size: 30px;
+	}
 
 	.child {
 		background-color: transparent;
-		box-shadow: 0px 0px 6px $secondary;
-		padding: 50px;
+		box-shadow: 0px 0px 6px $label;
+		padding: 40px;
 		min-width: 500px;
 		text-align: center;
 	}
 	.form-footer-button {
 		border-color: $linearGreen;
-		background-image: linear-gradient(90deg, #09daea 0%, #78e289 100%);
+		background-image: linear-gradient(90deg, $lightGreen 0%, $secondary 100%);
 		margin-bottom: 24px;
 	}
 
@@ -24,8 +31,8 @@
 		background-color: linear-gradient(90deg, $lightGreen 0%, $secondary 100%) !important;
 	}
 	.sign-up-hover {
-		color: $success;
-		padding-left: 3px;
+		color: $lightBlue;
+		padding-left: 4px;
 		text-decoration: none;
 	}
 	.sign-up-hover:hover {

@@ -7,7 +7,6 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import { Button } from '..';
 import { UploadPostForm } from '../uploadPost';
 import moment from 'moment';

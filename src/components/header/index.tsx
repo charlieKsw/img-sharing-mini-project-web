@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 // Components
-import { Avatar, Dropdown, Menu } from 'antd';
+import { Avatar, Dropdown, Menu, message } from 'antd';
 import HomeIcon from '@material-ui/icons/Home';
 import ExploreIcon from '@material-ui/icons/Explore';
 import { history } from '../../stores/router';
@@ -14,6 +14,7 @@ import { colors } from '../../config/style';
 interface HeaderProps {
 	token?: any;
 }
+
 export const Header = (props: HeaderProps) => {
 	const { token } = props;
 	const [ lastNameChar, setLastNameChar ] = useState('A');
@@ -28,6 +29,7 @@ export const Header = (props: HeaderProps) => {
 		switch (page) {
 			case 'logout':
 				localStorage.clear();
+				message.success(`Logout Success!`);
 				redirection = `/`;
 				break;
 			case 'explore':
