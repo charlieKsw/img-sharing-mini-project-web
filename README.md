@@ -40,7 +40,6 @@ npm start
 ## Something you should know
 - You must clone img-sharing-mini-project-server for backend connection
 - You can sign up a new account and login to start uploading pictures 
-- Backend tech-stack: Node JS & TypeScript & PostgreSql
 
 ## Port
 - You can set up your own default port - e.g. localhost:4000
